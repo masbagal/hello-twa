@@ -9,6 +9,7 @@
 html,
 body {
   @apply bg-gray-50 dark:bg-gray-900;
+  color: #434343;
 }
 
 /* Write your own custom component styles here */
@@ -21,3 +22,20 @@ body {
 /* Stop purging. */
 
 /* Your own custom utilities */
+.app-banner {
+  box-shadow: 1px 2px 8px #0770cd
+}
+
+.bottom-nav {
+  @apply bg-white py-4 flex items-center justify-evenly w-full shadow;
+  position: fixed;
+  bottom: 0;
+}
+
+button {
+  @apply px-4 py-2 rounded text-center w-full;
+}
+
+input[type='text'] {
+  @apply p-2 border-b
+}
