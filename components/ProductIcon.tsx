@@ -33,13 +33,15 @@ export default function ProductIcon(props: Props) {
     setTimeout(() => { router.push(url) }, 400)
   }
 
+  const buttonStyle = isClicked ? { background: backgroundColor } : { background: backgroundColor, boxShadow: `1px 2px 8px ${backgroundColor}` }
+
   return (
     <Link href={url} passHref>
       <a className='select-none'>
         <div className='flex flex-col items-top w-12 justify-center select-none'>
           <motion.div
             className='h-12 w-12 rounded-full bg-red-500 flex justify-center items-center'
-            style={{ background: backgroundColor }}
+            style={buttonStyle}
             animate={isClicked ? "clicked" : "default"}
             variants={animateVariants}
             onClick={handleClick}
