@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+import { motion } from "framer-motion"
 import { DocumentContext } from 'next/document';
 import { PRIMARY_PRODUCTS } from '../../constants/product';
 import InputField from '../../components/InputField';
@@ -9,9 +11,30 @@ interface PageProps {
 export default function SearchForm(props: PageProps) {
   const { product } = props;
   const productInformation = PRIMARY_PRODUCTS.find(p => p.id === product);
+  const [showSplash, setSplash] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setSplash(false), 1000);
+  }, [])
 
   return (
     <>
+      { showSplash ?
+        <motion.div
+          className='h-screen w-screen absolute top-0 flex justify-center items-center'
+          style={{ background: productInformation.backgroundColor }}
+          animate={{ opacity: [1, 1, 1, 0], scale: [1, 1, 1, 3] }}
+          transition={{ duration: 0.8, times: [0, 0.4, 0.6, 1] }}
+          initial={{ opacity: 1, scale: 1 }}
+        >
+          <productInformation.icon color='white' size='5rem' />
+        </motion.div> :
+        null}
+
+
+
+
+
       <section className='w-full px-4 py-4 flex flex-row' style={{ background: productInformation.backgroundColor }}>
         <productInformation.icon color='white' size='2rem' />
         <div className='ml-4 text-white'>
