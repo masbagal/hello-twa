@@ -49,7 +49,15 @@ const secondary = [
   },
   {
     icon: FiBox,
-    title: 'Box'
+    title: 'Box 2'
+  },
+  {
+    icon: FiFilm,
+    title: 'Film'
+  },
+  {
+    icon: FiInbox,
+    title: 'My Outbox'
   },
 ] as Array<SecondaryItem>
 
@@ -57,7 +65,7 @@ function SecondaryProducts() {
   return (
     <section className='whitespace-nowrap flex flex-row overflow-x-auto py-2 mt-4'>
       {secondary.map(item => (
-        <div key={item.title} className='mx-4 flex flex-col items-center justify-center'>
+        <div key={item.title} className='mx-4 w-3/12 flex flex-col items-center justify-center'>
           <item.icon color='#0770cd' size='1.4rem' />
           <div className='text-xs mt-1'>{item.title}</div>
         </div>
