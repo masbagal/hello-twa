@@ -30,7 +30,7 @@ export default function ProductIcon(props: Props) {
   const handleClick = (e: any) => {
     e.preventDefault();
     setClicked(true);
-    setTimeout(() => { router.push(url) }, 300)
+    setTimeout(() => { router.push(url) }, 400)
   }
 
   return (
