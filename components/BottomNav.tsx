@@ -15,11 +15,3 @@ export default function BottomNav() {
     </section>
   )
 }
-
-function MenuItem() {
-  return (
-    <div className='flex flex-col'>
-      <FiHome color='#8f8f8f' size='1.4rem' />
-    </div>
-  )
-}

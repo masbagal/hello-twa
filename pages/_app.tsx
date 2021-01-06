@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Header />
       <Component {...pageProps} />
+      <div style={{ height: 65 }} />
       <BottomNav />
     </>
   )
