@@ -10,7 +10,7 @@ export default function ProductIconList() {
       <section className='flex flex-row flex-wrap '>
         {
           PRIMARY_PRODUCTS.map(product => (
-            <div className='my-4 w-3/12 flex items-start justify-center'>
+            <div className='my-4 w-3/12 flex items-start justify-center select-none'>
               <ProductIcon title={product.title} backgroundColor={product.backgroundColor} icon={product.icon} url={product.url} />
             </div>
           ))

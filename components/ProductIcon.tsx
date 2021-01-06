@@ -36,7 +36,7 @@ export default function ProductIcon(props: Props) {
   return (
     <Link href={url} passHref>
       <a>
-        <div className='flex flex-col items-top w-12 justify-center user-select-none'>
+        <div className='flex flex-col items-top w-12 justify-center select-none'>
           <motion.div
             className='h-12 w-12 rounded-full bg-red-500 flex justify-center items-center'
             style={{ background: backgroundColor, boxShadow: `1px 2px 8px ${backgroundColor}` }}
